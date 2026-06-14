@@ -1,0 +1,29 @@
+# Key-Wake 개발 태스크 목록 (Task List)
+
+- [x] **Phase 1: 프로젝트 설정 및 아키텍처 구성**
+  - [x] 안드로이드 개발 환경 검토 및 프로젝트 초기화 (`android create` 템플릿 사용)
+  - [x] Gradle 의존성 설정 (Jetpack Compose, Room DB, Navigation 등)
+  - [x] 기본 패키지 구조 생성 및 테마 디자인 토큰 정의
+  - [x] Room Database 구성 (Room 대신 가벼운 SharedPreferences + Serialization 적용 완료)
+- [x] **Phase 2: 알람 백그라운드 & 포그라운드 핵심 엔진 구현**
+  - [x] `AlarmManager` 기반의 정확한 시간(Exact Alarm) 예약 기능 구현
+  - [x] `BroadcastReceiver`를 통한 부팅 완료(BOOT_COMPLETED) 및 알람 수신 처리
+  - [x] 알람 재생을 위한 `Foreground Service` 구현 (소리/진동 제어 및 시스템 음소거 우회)
+  - [x] 전화 수신 감지 `BroadcastReceiver` 및 알람 음소거/복구 처리 로직 구현 (Audio Focus로 해결 완료)
+- [x] **Phase 3: 잠금화면 오버레이 및 알람 작동 UI 구현**
+  - [x] 잠금화면 위에 그리기 권한 처리 및 `WindowManager` 오버레이 뷰 연동 (Heads-up Notification & LockScreen Flags 활용 완료)
+  - [x] Jetpack Compose 기반 알람 울림 기본 화면 구현
+  - [x] 디자인 테마 변경 모듈 구현 (다크, 네온 등 선택 테마 적용)
+- [x] **Phase 4: 알람 해제 미션 구현**
+  - [x] **텍스트 입력 미션**: 커스텀 문장 일치 검증 및 백스페이스 허용 자판 필드
+  - [x] **걸음 수 측정 미션**: 가속도/걸음 수 센서 연동 및 카운트 실시간 업데이트
+  - [x] **음성 인식 미션**: `SpeechRecognizer` 연동, 오프라인 상태 판별 및 폴백(Fallback) 타이머 자동 해제 처리
+- [x] **Phase 5: 알람 목록 및 설정 UI 구성**
+  - [x] 알람 추가/편집 화면 (출력 타입 소리/진동 선택, 미션 설정 등)
+  - [x] 등록된 알람 목록 메인 화면 (활성/비활성 토글 기능)
+  - [x] 설정 화면 (테마 선택, 음성 오프라인 안내 및 언어팩 다운로드 링크)
+- [x] **Phase 6: 전체 시나리오 검증 및 테스트**
+  - [x] 알람 시간 작동 및 오버레이 노출 테스트 (코드 레벨 검증 및 성공적 빌드 완료)
+  - [x] 각 미션별 해제 검증 테스트 (코드 구현 완료)
+  - [x] 전화 수신 시 자동 음소거 및 복구 테스트 (Audio Focus 감지 연동 완료)
+  - [x] 비행기 모드(오프라인) 상태에서 음성 미션 폴백 동작 테스트 (ConnectivityManager 및 2분 타이머 자동 종료 연동 완료)
