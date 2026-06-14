@@ -5,10 +5,10 @@ plugins {
 }
 
 android {
-    namespace = "com.example.key_wake"
+    namespace = "com.taeseob.keywake"
     compileSdk = 36
     defaultConfig {
-        applicationId = "com.example.key_wake"
+        applicationId = "com.taeseob.keywake"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

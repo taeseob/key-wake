@@ -34,26 +34,26 @@
 ## 2. 생성 및 수정된 파일 상세
 
 - **데이터 레이어 (Data & Persistency)**
-  - [Alarm.kt](../app/src/main/java/com/example/key_wake/data/Alarm.kt): 알람 모델 및 미션 타입 정의.
-  - [AlarmRepository.kt](../app/src/main/java/com/example/key_wake/data/AlarmRepository.kt): SharedPreferences 및 JSON 직렬화를 통한 영속성 및 테마 저장 제어.
-  - [KeyWakeApplication.kt](../app/src/main/java/com/example/key_wake/KeyWakeApplication.kt): 싱글톤 패턴의 Repository 접근을 지원하는 Application 클래스.
+  - [Alarm.kt](../app/src/main/java/com/taeseob/keywake/data/Alarm.kt): 알람 모델 및 미션 타입 정의.
+  - [AlarmRepository.kt](../app/src/main/java/com/taeseob/keywake/data/AlarmRepository.kt): SharedPreferences 및 JSON 직렬화를 통한 영속성 및 테마 저장 제어.
+  - [KeyWakeApplication.kt](../app/src/main/java/com/taeseob/keywake/KeyWakeApplication.kt): 싱글톤 패턴의 Repository 접근을 지원하는 Application 클래스.
 
 - **알람 구동 엔진 및 리시버 (Alarm Engine)**
-  - [AlarmScheduler.kt](../app/src/main/java/com/example/key_wake/util/AlarmScheduler.kt): AlarmManager 예약 등록 및 취소 유틸리티.
-  - [AlarmReceiver.kt](../app/src/main/java/com/example/key_wake/receiver/AlarmReceiver.kt): 지정 시간에 예약을 받아 Foreground Service를 실행하는 BroadcastReceiver.
-  - [BootReceiver.kt](../app/src/main/java/com/example/key_wake/receiver/BootReceiver.kt): 기기 부팅 시 알람 목록을 다시 동적으로 등록해 주는 Receiver.
-  - [AlarmService.kt](../app/src/main/java/com/example/key_wake/service/AlarmService.kt): 알람 벨소리/진동 미디어 재생 및 오디오 포커스 감지 제어용 Foreground Service.
+  - [AlarmScheduler.kt](../app/src/main/java/com/taeseob/keywake/util/AlarmScheduler.kt): AlarmManager 예약 등록 및 취소 유틸리티.
+  - [AlarmReceiver.kt](../app/src/main/java/com/taeseob/keywake/receiver/AlarmReceiver.kt): 지정 시간에 예약을 받아 Foreground Service를 실행하는 BroadcastReceiver.
+  - [BootReceiver.kt](../app/src/main/java/com/taeseob/keywake/receiver/BootReceiver.kt): 기기 부팅 시 알람 목록을 다시 동적으로 등록해 주는 Receiver.
+  - [AlarmService.kt](../app/src/main/java/com/taeseob/keywake/service/AlarmService.kt): 알람 벨소리/진동 미디어 재생 및 오디오 포커스 감지 제어용 Foreground Service.
 
 - **UI 레이어 및 테마 (UI & Design)**
-  - [MainActivity.kt](../app/src/main/java/com/example/key_wake/MainActivity.kt): 알림, 녹음, 활동 감지 권한을 기동 시 동적 획득하며 테마와 내비게이션을 로딩하는 메인 엔트리.
-  - [NavigationKeys.kt](../app/src/main/java/com/example/key_wake/NavigationKeys.kt): 직렬화 가능한 라우팅 Key 모음.
-  - [Navigation.kt](../app/src/main/java/com/example/key_wake/Navigation.kt): 메인, 알람 수정, 설정 화면 라우팅 연결.
-  - [MainScreen.kt](../app/src/main/java/com/example/key_wake/ui/main/MainScreen.kt): 등록된 알람 목록 및 메인 뷰 구현.
-  - [MainScreenViewModel.kt](../app/src/main/java/com/example/key_wake/ui/main/MainScreenViewModel.kt): 알람 목록 상태 흐름 관리 뷰모델.
-  - [AddEditAlarmScreen.kt](../app/src/main/java/com/example/key_wake/ui/alarm/AddEditAlarmScreen.kt): 요일 반복, 진동 전용, 미션 조건 설정용 세부 에디터.
-  - [SettingsScreen.kt](../app/src/main/java/com/example/key_wake/ui/settings/SettingsScreen.kt): 테마 설정 카드 및 오프라인 Google STT 활성화 튜토리얼 뷰.
-  - [AlarmActivity.kt](../app/src/main/java/com/example/key_wake/ui/alarm/AlarmActivity.kt): 실제 알람 구동 및 3대 미션(텍스트 입력, 걸음 수, 마이크 음성)의 실시간 상태 검증 화면.
-  - [Color.kt](../app/src/main/java/com/example/key_wake/theme/Color.kt) & [Theme.kt](../app/src/main/java/com/example/key_wake/theme/Theme.kt): 4대 프리미엄 컬러 세트 및 동적 테마 시스템 연동.
+  - [MainActivity.kt](../app/src/main/java/com/taeseob/keywake/MainActivity.kt): 알림, 녹음, 활동 감지 권한을 기동 시 동적 획득하며 테마와 내비게이션을 로딩하는 메인 엔트리.
+  - [NavigationKeys.kt](../app/src/main/java/com/taeseob/keywake/NavigationKeys.kt): 직렬화 가능한 라우팅 Key 모음.
+  - [Navigation.kt](../app/src/main/java/com/taeseob/keywake/Navigation.kt): 메인, 알람 수정, 설정 화면 라우팅 연결.
+  - [MainScreen.kt](../app/src/main/java/com/taeseob/keywake/ui/main/MainScreen.kt): 등록된 알람 목록 및 메인 뷰 구현.
+  - [MainScreenViewModel.kt](../app/src/main/java/com/taeseob/keywake/ui/main/MainScreenViewModel.kt): 알람 목록 상태 흐름 관리 뷰모델.
+  - [AddEditAlarmScreen.kt](../app/src/main/java/com/taeseob/keywake/ui/alarm/AddEditAlarmScreen.kt): 요일 반복, 진동 전용, 미션 조건 설정용 세부 에디터.
+  - [SettingsScreen.kt](../app/src/main/java/com/taeseob/keywake/ui/settings/SettingsScreen.kt): 테마 설정 카드 및 오프라인 Google STT 활성화 튜토리얼 뷰.
+  - [AlarmActivity.kt](../app/src/main/java/com/taeseob/keywake/ui/alarm/AlarmActivity.kt): 실제 알람 구동 및 3대 미션(텍스트 입력, 걸음 수, 마이크 음성)의 실시간 상태 검증 화면.
+  - [Color.kt](../app/src/main/java/com/taeseob/keywake/theme/Color.kt) & [Theme.kt](../app/src/main/java/com/taeseob/keywake/theme/Theme.kt): 4대 프리미엄 컬러 세트 및 동적 테마 시스템 연동.
 
 - **설정 및 명세 (Settings)**
   - [AndroidManifest.xml](../app/src/main/AndroidManifest.xml): 알람, 진동, 백그라운드 서비스 유형, 권한 등 정의.
