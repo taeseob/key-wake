@@ -44,9 +44,9 @@
 
 아래 문서를 통해 프로젝트 기획 요구사항부터 구현, 빌드 결과까지의 자세한 개발 히스토리를 확인하실 수 있습니다.
 
-- [📝 구현 계획서 (Implementation Plan)](./implementation_plan.md) - 플랫폼 제약 분석 및 세부 사양 정의서.
-- [📋 개발 태스크 목록 (Task List)](./task.md) - 단계별 구현 일정 및 기능 개발 체크리스트.
-- [🔍 개발 결과 보고서 (Walkthrough)](./walkthrough.md) - 전체 코드 아키텍처 의사결정 및 빌드 검증 보고서.
+- [📝 구현 계획서 (Implementation Plan)](./docs/implementation_plan.md) - 플랫폼 제약 분석 및 세부 사양 정의서.
+- [📋 개발 태스크 목록 (Task List)](./docs/task.md) - 단계별 구현 일정 및 기능 개발 체크리스트.
+- [🔍 개발 결과 보고서 (Walkthrough)](./docs/walkthrough.md) - 전체 코드 아키텍처 의사결정 및 빌드 검증 보고서.
 
 ---
 
